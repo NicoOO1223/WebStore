@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 5%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 2rem;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a {
+  font-size: 1.2rem;
+  color: black;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 2rem;
+  position: relative;
+}
+
+.navbar a::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width .3s;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+
+.container {
+  padding-top: 100px;
+}
+
+.welcome-view, .Oferta, .Info, .insta {
+  width: 100vw;
+  padding: 50px 5%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-view {
+  background: #f0f0f0;
+}
+
+.Oferta {
+  background: #eaeaea;
+}
+
+.Info {
+  background: #dcdcdc;
+}
+
+.insta {
+  background: #cfcfcf;
+}
+
+footer {
+  background: #333;
+  color: white;
+  padding: 20px 5%;
+  text-align: center;
+}
