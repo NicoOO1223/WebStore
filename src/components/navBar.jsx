@@ -1,10 +1,11 @@
 import React from "react";
 
-function NavBar(){
-    return(
-        <header class="header">
-            <a href="#" class="logo">Logo</a>
-            <nav class="navbar">
+function NavBar()
+{
+    return (
+        <header className="header">
+            <a href="#" className="logo">Logo</a>
+            <nav className="navbar">
                 <a href="#">Home</a>
                 <a href="#">Oferta</a>
                 <a href="#">Info</a>

@@ -7,14 +7,13 @@ import NavBar from "./navBar";
 import Body from "./Body";
 
 
-import '../../public/styles.css'
-
-function App() {
+function App()
+{
   return (
-   <div>
-        <NavBar/>
-        <WelcomePage/>
-        <Body />
+    <div>
+      <NavBar />
+      <WelcomePage />
+      <Body />
     </div>
   );
 }

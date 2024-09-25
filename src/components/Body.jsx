@@ -1,18 +1,21 @@
 import React from "react";
 
 import Section from "./Section";
+import "./Body.css";
 
-function Body(){
-    return(
-        <div class="conatiner">
-          <Section class="Oferta"/>
-          <Section class="Info"/>
-          <Section class="insta"/>
-          <footer>
 
-          </footer>
-        </div>
-    )
+function Body()
+{
+  return (
+    <div className="container">
+      <Section className="Oferta" />
+      <Section className="Info" />
+      <Section className="insta" />
+      <footer>
+
+      </footer>
+    </div>
+  )
 }
 
 export default Body;
