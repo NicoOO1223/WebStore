@@ -2,11 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from './Button';
 import './Navbar.css';
-import logo from './Throwie/logo.png'
+import logoBlack from './Throwie/logoBlack.png'
+import logoWhite from './Throwie/logoWhite.png'
 
 function NavBar() {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
+    const [stickyNavbar, setNavbarSticky] = useState(false);
+    const [showNavbar, setShowNavbar] = useState(true);
+    const [lastScrollY, setlastScrollY] = useState(0);
 
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
@@ -19,20 +23,37 @@ function NavBar() {
         }
     };
 
+    const handleScroll = () => {
+        if(window.scrollY > 100) {
+            setNavbarSticky(true);
+        } else {
+            setNavbarSticky(false);
+        }
+    
+        if (window.scrollY >= (lastScrollY)) {
+            setShowNavbar(false);
+        } else {
+            setShowNavbar(true);
+        }
+        setlastScrollY(window.scrollY);
+    }
+
     useEffect(() => {
         showButton();
         window.addEventListener('resize', showButton);
+        window.addEventListener('scroll', handleScroll);
 
         return () => {
             window.removeEventListener('resize', showButton);
+            window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [lastScrollY]);
 
     return (
-        <nav className='navbar'>
+        <nav className={`navbar ${stickyNavbar ? 'sticky-navbar' : ''} ${showNavbar ? 'navbar-show' : 'navbar-hidden'}`}>
             <div className='navbar-container'>
                 <Link to='/' className='navbar-logo'>
-                    <img className='logo-img' src={logo}></img> 
+                    <img className='logo-img' src={stickyNavbar ? logoWhite : logoBlack }></img> 
                 </Link>
                 <div className='menu-icon' onClick={handleClick}>
                     <i className={click ? 'fas fa-times' : 'fas fa-bars'} />

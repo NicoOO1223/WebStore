@@ -1,7 +1,8 @@
 import React from 'react'
 import CardItem from './CardItem'
 import './Cards.css'
-import img1 from './Throwie/MAIN LOGO FORMAT PNG.png'
+import img1 from './Throwie/logoBlack.png'
+import img2 from './Throwie/logoReversed.png'
 
 function Cards() {
   return (
@@ -12,36 +13,42 @@ function Cards() {
                 <ul className='cards-items'>
                     <CardItem 
                     src={img1}
+                    hoverSrc={img2}
+                    text='Item'
+                    label='label'
+                    path=''
+                    />
+                  <CardItem 
+                    src={img1}
+                    hoverSrc={img2}
                     text='Item'
                     label='label'
                     path=''
                     />
                     <CardItem 
                     src={img1}
+                    hoverSrc={img2}
                     text='Item'
                     label='label'
                     path=''
                     />
                     <CardItem 
                     src={img1}
+                    hoverSrc={img2}
                     text='Item'
                     label='label'
                     path=''
                     />
                     <CardItem 
                     src={img1}
+                    hoverSrc={img2}
                     text='Item'
                     label='label'
                     path=''
                     />
                     <CardItem 
                     src={img1}
-                    text='Item'
-                    label='label'
-                    path=''
-                    />
-                    <CardItem 
-                    src={img1}
+                    hoverSrc={img2}
                     text='Item'
                     label='label'
                     path=''
