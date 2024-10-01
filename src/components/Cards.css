@@ -13,7 +13,6 @@ h1 {
     align-items: center;
     justify-content: center;
     max-width: 1200px;
-    width: 90%;
     margin: 0 auto;
 }
 
@@ -27,19 +26,34 @@ h1 {
     flex-wrap: wrap;
     margin-bottom: 24px;
     justify-content: center;
+    width: 100%;
 }
 
 .cards-item {
-    flex: 1;
-    margin: 1rem;
-    border-radius: 10px;
+    flex: content;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    min-width: 300px;
-    max-width: 300px;
+    min-width: 100px;
+    max-width: 400px;
+    min-height: 600px;
+    transition: flex 0.3s ease;
 }
+
+.cards-item-hover {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  min-width: 100px;
+  max-width: 600px;
+  min-height: 600px;
+  transition: flex 0.3s ease;
+}
+
+
 
 .cards-item-link {
     display: flex;
@@ -58,6 +72,7 @@ h1 {
     width: 100%;
     padding-top: 67%;
     overflow: hidden;
+    min-height: 600px;
 }
 
 .fade-img {

@@ -9,7 +9,7 @@ function Cards() {
     <div className='cards'>
         <h1>Oferta</h1>
         <div className='cards-container'>
-            <div className='cards-wrapper'>
+            
                 <ul className='cards-items'>
                     <CardItem 
                     src={img1}
@@ -32,29 +32,8 @@ function Cards() {
                     label='label'
                     path=''
                     />
-                    <CardItem 
-                    src={img1}
-                    hoverSrc={img2}
-                    text='Item'
-                    label='label'
-                    path=''
-                    />
-                    <CardItem 
-                    src={img1}
-                    hoverSrc={img2}
-                    text='Item'
-                    label='label'
-                    path=''
-                    />
-                    <CardItem 
-                    src={img1}
-                    hoverSrc={img2}
-                    text='Item'
-                    label='label'
-                    path=''
-                    />
                 </ul>
-            </div>
+            
         </div>
       
     </div>

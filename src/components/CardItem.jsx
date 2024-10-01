@@ -7,7 +7,7 @@ function CardItem(props) {
 
   return (
     <>
-      <li className='cards-item'>
+      <li className={hovered ? 'cards-item-hover' : 'cards-item'}>
         <Link className='cards-item-link' to={props.link}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}>
