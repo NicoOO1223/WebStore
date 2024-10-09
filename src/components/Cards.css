@@ -1,7 +1,6 @@
 .cards {
     padding: 4rem;
-    background-color: #fff;
-}
+  }
 
 h1 {
     text-align: center;
@@ -14,11 +13,6 @@ h1 {
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.cards-wrapper {
-    position: relative;
-    margin: 50px 0 45px;
 }
 
 .cards-items {
@@ -116,6 +110,7 @@ h1 {
   
   .cards-item-info {
     padding: 20px 30px 30px;
+    background-color: white;
   }
   
   .cards-item-text {
@@ -123,6 +118,7 @@ h1 {
     font-size: 18px;
     line-height: 24px;
   }
+
   
   
   @media only screen and (min-width: 1200px) {

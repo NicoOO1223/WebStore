@@ -7,9 +7,9 @@ import img2 from './Throwie/logoReversed.png'
 function Cards() {
   return (
     <div className='cards'>
-        <h1>Oferta</h1>
+       <h1>Oferta</h1>
+      <div className='Outline'>
         <div className='cards-container'>
-            
                 <ul className='cards-items'>
                     <CardItem 
                     src={img1}
@@ -35,7 +35,7 @@ function Cards() {
                 </ul>
             
         </div>
-      
+      </div>
     </div>
   )
 }

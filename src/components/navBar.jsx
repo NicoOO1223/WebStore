@@ -24,7 +24,7 @@ function NavBar() {
     };
 
     const handleScroll = () => {
-        if(window.scrollY > 100) {
+        if(window.scrollY > 800) {
             setNavbarSticky(true);
         } else {
             setNavbarSticky(false);

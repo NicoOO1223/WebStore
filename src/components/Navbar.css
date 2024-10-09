@@ -15,7 +15,7 @@
 }
 
 .sticky-navbar {
-    background: black;
+    background-image: url(./Throwie/Background.png);
     height: 80px;
     display: flex;
     justify-content: center;
@@ -25,7 +25,7 @@
     width: 100%;
     top: 0;
     z-index: 100;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid whitesmoke;
     margin-bottom: 10px;
      transition: top 0.3s ease-in-out, background 0.3s ease-in-out;
 }
