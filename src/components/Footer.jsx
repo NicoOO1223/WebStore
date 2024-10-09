@@ -9,36 +9,23 @@ function Footer() {
       <div className='footer-links'>
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
-            <h2>Section</h2>
-            <Link to='/sign-up'>sign up</Link>
-            <Link to='/'>item 1</Link>
-            <Link to='/'>item 2</Link>
-            <Link to='/'>item 3</Link>
-            <Link to='/'>item 4</Link>
+            <h2>Menu</h2>
+            <Link to='/'>Strona główna</Link>
+            <Link to='/'>Oferta</Link>
+            <Link to='/'>Newsletter</Link>
+            <Link to='/'>Koszyk</Link>
           </div>
           <div className='footer-link-items'>
-            <h2>Section</h2>
-            <Link to='/sign-up'>sign up</Link>
-            <Link to='/'>item 1</Link>
-            <Link to='/'>item 2</Link>
-            <Link to='/'>item 3</Link>
-            <Link to='/'>item 4</Link>
+            <h2>Informacje</h2>
+            <Link to='/'>Zwroty</Link>
+            <Link to='/'>Płatność</Link>
+            <Link to='/'>Regulamin</Link>
+            <Link to='/'>Polityka Prywatności</Link>
           </div>
           <div className='footer-link-items'>
-            <h2>Section</h2>
-            <Link to='/sign-up'>sign up</Link>
-            <Link to='/'>item 1</Link>
-            <Link to='/'>item 2</Link>
-            <Link to='/'>item 3</Link>
-            <Link to='/'>item 4</Link>
-          </div>
-          <div className='footer-link-items'>
-            <h2>Section</h2>
-            <Link to='/sign-up'>sign up</Link>
-            <Link to='/'>item 1</Link>
-            <Link to='/'>item 2</Link>
-            <Link to='/'>item 3</Link>
-            <Link to='/'>item 4</Link>
+            <h2>Pomoc</h2>
+            <Link to='/'>Kontakt</Link>
+            <Link to='/'>Współpraca</Link>
           </div>
         </div>
       </div>
@@ -50,7 +37,7 @@ function Footer() {
               logo
             </Link>
           </div>
-          <small className='website-rights'>website rights</small>
+          <small className='website-rights'>Throwie 2024 © Wszystkie prawa zastrzeżone</small>
           <div className='social-icons'>
             <Link
               className='social-icon-link facebook'
