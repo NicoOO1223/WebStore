@@ -15,17 +15,17 @@
 }
 
 .sticky-navbar {
-    background-image: url(./Throwie/Background.png);
+    background-color: rgb(248, 248, 248);
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    position: sticky;
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 100;
-    border-bottom: 2px solid whitesmoke;
+    border-bottom: 2px solid black;
     margin-bottom: 10px;
      transition: top 0.3s ease-in-out, background 0.3s ease-in-out;
 }
@@ -48,19 +48,35 @@
 }
 
 .logo-img {
-    height: 120px;
+    height: 70px;
     margin-right: 10px;
     vertical-align: middle;
+    margin-bottom: 10px;
 }
+
 .navbar-logo {
     color: #fff;
-    justify-self: start;
+    justify-self: center;
     margin-left: 20px;
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
     display: flex;
     align-items: center;
+    flex: 1;
+}
+
+.logo-insta {
+    height: 60px;
+    margin-right: 10px;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+
+.logo-insta:hover {
+    cursor: pointer;
+    border-bottom: 10px solid transparent;
+    transition: all 0.2s ease-in-out;
 }
 
 .nav-menu {
@@ -72,6 +88,13 @@
     width: 60vw;
     justify-content: end;
     margin-right: 2rem;
+    flex: 1;
+  }
+  .nav-items-left {
+    display: flex;
+    flex: 1;
+    list-style: none;
+    border-bottom: 10px;
   }
 
 .nav-item {
@@ -79,7 +102,7 @@
 }
 
 .nav-links {
-    color: red;
+    color: black;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -88,7 +111,23 @@
 }
 
 .nav-links:hover {
-    border-bottom: 4px solid red;
+    color: #ff5757;
+    border-bottom: 4px solid #ff5757;
+    transition: all 0.2s ease-out;
+}
+
+.nav-links-sticky{
+    color: #ff5757;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+}
+
+.nav-links-sticky:hover {
+    color: #ff5757;
+    border-bottom: 4px solid #ff5757;
     transition: all 0.2s ease-out;
 }
 
@@ -98,6 +137,9 @@
 
 .menu-icon {
     display: none;
+}
+button {
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 960px) {

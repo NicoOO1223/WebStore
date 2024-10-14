@@ -6,7 +6,7 @@ function Insta() {
   return (
     <div className='InstaContainer'>
       <div className='Outline'>
-        <h1>Wbijaj na instagrama!</h1>
+        <h1 class='Insta-text' data-after=''>Wbijaj na instagrama!</h1>
         <div className='PicWrap'>
           <ul className='Pictures'>
             <li className='Picture'>

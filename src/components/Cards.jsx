@@ -5,6 +5,7 @@ import img1 from './Throwie/logoBlack.png'
 import img2 from './Throwie/logoReversed.png'
 
 function Cards() {
+  
   return (
     <div className='cards'>
        <h1>Oferta</h1>

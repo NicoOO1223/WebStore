@@ -5,6 +5,7 @@ import Cards from '../Cards'
 import Insta from '../Insta'
 import Footer from '../Footer'
 import Newsletter from '../Newsletter'
+import About from '../About'
 
 
 function Home() {

@@ -1,6 +1,9 @@
 .cards {
     padding: 4rem;
   }
+  .cards.visible {
+    opacity: 1;
+  }
 
 h1 {
     text-align: center;
