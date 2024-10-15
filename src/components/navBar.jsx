@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from './Button';
 import './Navbar.css';
-import logoBlack from './Throwie/logoBlack.png'
-import logoWhite from './Throwie/THROWIE_NAV_WHITE.png'
-import logo from './Throwie/THROWIE_NAV.png'
-import logoRed from './Throwie/THROWIE_NAV_RED.png'
-import logoInstaC from './Throwie/ig-color.png'
-import logoInsta from './Throwie/ig-black.png'
-
+import logo from './Throwie/THROWIE_NAV.png';
+import logoRed from './Throwie/THROWIE_NAV_RED.png';
+import logoIgC from './Throwie/Svg/ig-color.svg';
+import logoIg from './Throwie/Svg/ig-black.svg';
+import logoYtC from './Throwie/Svg/yt-color.svg';
+import logoYt from './Throwie/Svg/yt-black.svg';
+import logoFbC from './Throwie/Svg/f-color.svg';
+import logoFb from './Throwie/Svg/f-black.svg';
 
 function NavBar() {
     const [click, setClick] = useState(false);
@@ -17,7 +18,9 @@ function NavBar() {
     const [showNavbar, setShowNavbar] = useState(true);
     const [lastScrollY, setlastScrollY] = useState(0);
     const [logoSrc, setLogoSrc] = useState(logo);
-    const [instaSrc, setInstaSrc] = useState(logoInsta)
+    const [igSrc, setIgSrc] = useState(logoIg);
+    const [ytSrc, setYtSrc] = useState(logoYt);
+    const [fbSrc, setFbSrc] = useState(logoFb);
 
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
@@ -30,39 +33,28 @@ function NavBar() {
         }
     };
 
-    const handleLogoHover = () => {
-            setLogoSrc(logoRed);
-            setInstaSrc(logoInstaC)
-    };
+    const handleLogoHover = () => setLogoSrc(logoRed);
+    const handleLogoLeave = () => setLogoSrc(logo);
 
-    const handleLogoLeave = () => {
-        setLogoSrc(logo);
-        setInstaSrc(logoInsta)
-    }
+    const handleIgHover = () => setIgSrc(logoIgC);
+    const handleIgLeave = () => setIgSrc(logoIg);
 
-    const handleInstaHover = () => {
-        setLogoSrc(logoRed);
-        setInstaSrc(logoInstaC)
-    }
-    const handleInstaLeave = () => {
-        setLogoSrc(logo);
-        setInstaSrc(logoInsta)
-    }
+    const handleFbHover = () => setFbSrc(logoFbC);
+    const handleFbLeave = () => setFbSrc(logoFb);
+
+    const handleYtHover = () => setYtSrc(logoYtC);
+    const handleYtLeave = () => setYtSrc(logoYt);
 
     const handleScroll = () => {
-        if(window.scrollY > 800) {
-            setNavbarSticky(true);
-        } else {
-            setNavbarSticky(false);
-        }
-    
-        if (window.scrollY >= (lastScrollY)) {
+        setNavbarSticky(window.scrollY > 800);
+
+        if (window.scrollY > lastScrollY) {
             setShowNavbar(false);
         } else {
             setShowNavbar(true);
         }
         setlastScrollY(window.scrollY);
-    }
+    };
 
     useEffect(() => {
         showButton();
@@ -79,18 +71,19 @@ function NavBar() {
         <nav className={`navbar ${stickyNavbar ? 'sticky-navbar' : ''} ${showNavbar ? 'navbar-show' : 'navbar-hidden'}`}>
             <div className='navbar-container'>
                 <Link to='/' className='navbar-logo'>
-                    <img className='logo-img' src={logoSrc} onMouseEnter={handleLogoHover} onMouseLeave={handleLogoLeave}></img> 
+                    <img className='logo-img' src={logoSrc} alt='Logo' onMouseEnter={handleLogoHover} onMouseLeave={handleLogoLeave} />
                 </Link>
                 <div className='menu-icon' onClick={handleClick}>
                     <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
                 </div>
                 <div className='nav-items-left'>
-                <img className='logo-insta' src={instaSrc} onMouseEnter={handleInstaHover} onMouseLeave={handleInstaLeave}></img>
+                    <img className='logo' src={igSrc} alt='Instagram' onMouseEnter={handleIgHover} onMouseLeave={handleIgLeave} />
+                    <img className='logo' src={ytSrc} alt='YouTube' onMouseEnter={handleYtHover} onMouseLeave={handleYtLeave} />
+                    <img className='logo' src={fbSrc} alt='Facebook' onMouseEnter={handleFbHover} onMouseLeave={handleFbLeave} />
                 </div>
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                
                     <li className='nav-item'>
-                        <Link to='/' className={stickyNavbar ? 'nav-links-sticky' : 'nav-links'} onClick={closeMobileMenu}>
+                        <Link to='oferta' className={stickyNavbar ? 'nav-links-sticky' : 'nav-links'} onClick={closeMobileMenu}>
                             Oferta
                         </Link>
                     </li>
@@ -105,7 +98,7 @@ function NavBar() {
                         </Link>
                     </li>
                 </ul>
-            
+
                 {button && <Button buttonStyle='btn-outline'>Sprawdz</Button>}
             </div>
         </nav>

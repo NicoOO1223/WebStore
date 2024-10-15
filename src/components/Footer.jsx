@@ -10,9 +10,9 @@ function Footer() {
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
             <h2>Menu</h2>
-            <Link to='/'>Strona główna</Link>
+            <Link to='/'>Dania główne</Link>
             <Link to='/'>Oferta</Link>
-            <Link to='/'>Newsletter</Link>
+            <Link to='/'>Przystawki</Link>
             <Link to='/'>Koszyk</Link>
           </div>
           <div className='footer-link-items'>
